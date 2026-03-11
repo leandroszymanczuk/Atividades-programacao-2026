@@ -23,10 +23,10 @@ let lerTeclado = require("readline-sync")
 
 // → Seu código aqui:
 
-console.log("iniciando programa");
-console.info("info : exemplo de console.info");
-console.warn("Aviso : Sempre que for exibir o usuario, inicia o programa com node e o nome do arquivo");
-console.error("error : Algo deu errado");
+//console.log("iniciando programa");
+//console.info("info : exemplo de console.info");
+//console.warn("Aviso : Sempre que for exibir o usuario, inicia o programa com node e o nome do arquivo");
+//console.error("error : Algo deu errado");
 
 // ------------------------------------------------------------
 // EXERCÍCIO 2 – Saudação personalizada
@@ -51,17 +51,17 @@ console.error("error : Algo deu errado");
 // c) Exiba o objeto com console.table().
 
 // → Seu código aqui:
-let nomeDoUsuario = lerTeclado.question("Digite seu nome"); 
-let idadeDoUsuario = lerTeclado.question("Digite sua idade");
-let cidadeDoUsuario = lerTeclado.question("Digite sua cidade");
+//let nomeDoUsuario = lerTeclado.question("Digite seu nome"); 
+//let idadeDoUsuario = lerTeclado.question("Digite sua idade");
+//let cidadeDoUsuario = lerTeclado.question("Digite sua cidade");
 
-let ficha = {
-    nome: nomeDoUsuario,
-    idade: idadeDoUsuario,
-    cidade: cidadeDoUsuario
-};
+//let ficha = {
+ //   nome: nomeDoUsuario,
+  //  idade: idadeDoUsuario,
+//    cidade: cidadeDoUsuario
+//};
 
-console.table(ficha)
+//console.table(ficha)
 
 
 // ------------------------------------------------------------
@@ -72,12 +72,12 @@ console.table(ficha)
 // c) Exiba as respostas no console usando template literal.
 
 // → Seu código aqui:
-let pergunta01 = lerTeclado.keyInYN("Você sabe jogar bola?")
-let pergunta02 = lerTeclado.keyInYN("Você gosta de frutas?")
-let pergunta03 = lerTeclado.keyInYN("Você pratica esportes")
+//let pergunta01 = lerTeclado.keyInYN("Você sabe jogar bola?")
+//let pergunta02 = lerTeclado.keyInYN("Você gosta de frutas?")
+//let pergunta03 = lerTeclado.keyInYN("Você pratica esportes")
 
 
-console.log(`Leandro ${pergunta01 ? "Sabe jogar bola" : " Não sabe jogar bola "} mas ${pergunta02 ? "Gosta de frutas" : "Não gosto de frutas"} pratica algum esporte ${pergunta03 ? "faz algum esporte" : "não faço"}`)
+//console.log(`Leandro ${pergunta01 ? "Sabe jogar bola" : " Não sabe jogar bola "} mas ${pergunta02 ? "Gosta de frutas" : "Não gosto de frutas"} pratica algum esporte ${pergunta03 ? "faz algum esporte" : "não faço"}`)
 
 
 // ------------------------------------------------------------
@@ -89,13 +89,13 @@ console.log(`Leandro ${pergunta01 ? "Sabe jogar bola" : " Não sabe jogar bola "
 
 // → Seu código aqui:
  
-let comidasFavoritas01 = lerTeclado.question("Você gosta de banana?")
-let comidasFavoritas02 = lerTeclado.question("Você gosta de salgados")
-let comidasFavoritas03 = letTeclado.question("Você gosta bolo ")
+//let comidasFavoritas01 = lerTeclado.question("Você gosta de banana?")
+//let comidasFavoritas02 = lerTeclado.question("Você gosta de salgados")
+//let comidasFavoritas03 = letTeclado.question("Você gosta bolo ")
 
-let listasDeComidas = [comidasFavoritas01 , comidasFavoritas02 , comidasFavoritas03]
+//let comidasFavoritas = [comidasFavoritas01 , comidasFavoritas02 , comidasFavoritas03]
 
-console.table
+//console.table(listaDeComidas);
 
 
 // ------------------------------------------------------------
@@ -108,13 +108,17 @@ console.table
 // d) Exiba a mesma informação com console.table().
 
 // → Seu código aqui:
-let nomeDoUsuario = lerTeclado.question("Nome do usuario");
-let cidadeDoUsuario = lerTeclado.question("Qual sua cidade ");
-let idadeDoUsuario = lerTeclado.question("Qual sua idade? ")
+// let nome = lerTeclado.question("Nome do usuario");
+// let cidade = lerTeclado.question("Qual sua cidade ");
+// let idade = lerTeclado.question("Qual sua idade? ")
 
-
-console.log("_______________________________");
-
+// let cadastroPessoal = {
+//     nome: nome,
+//     cidade: cidade,
+//     idade: idade 
+    
+// }
+// console.log(`me chamo: ${cadastroPessoal.nome} moro ${cadastroPessoal.cidade} tenho ${cadastroPessoal.idade}`)
 
 // ------------------------------------------------------------
 // EXERCÍCIO 7 – Lista de objetos
@@ -130,11 +134,55 @@ console.log("_______________________________");
 // g) Exiba somente o nome e a rua do 1º usuário.
 
 // → Seu código aqui:
+// let n_nome1 = lerTeclado.question("digite seu nome")
+// let i_idade1 = lerTeclado.question("Digite sua idade ")
+// let city_cidade1 = lerTeclado.question("Digite sua cidade")
+// let r_rua1 = lerTeclado.question("digite usa rua")
+// let c_number1 = lerTeclado.question("Digite o numero da sua casa")
 
+// let nome1 = {
+//     nome: n_nome1,
+//     idade : i_idade1,
+//     cidade : city_cidade1,
+//     rua : r_rua1,
+//     casa : c_number1 
 
-console.log("_______________________________");
+// }
 
+// let n_nome2 = lerTeclado.question("digite seu nome")
+// let i_idade2 = lerTeclado.question("Digite sua idade ")
+// let city_cidade2 = lerTeclado.question("Digite sua cidade")
+// let r_rua2 = lerTeclado.question("digite usa rua")
+// let c_number2 = lerTeclado.question("Digite o numero da sua casa")
 
+// let nome2 = {
+//     nome : n_nome2,
+//     idade : i_idade2,
+//     cidade : city_cidade2,
+//     rua : r_rua2,
+//     casa : c_number2 
+
+// }
+// let nome_3 = lerTeclado.question("digite seu nome")
+// let i_idade3 = lerTeclado.question("Digite sua idade ")
+// let city_cidade3 = lerTeclado.question("Digite sua cidade")
+// let r_rua3 = lerTeclado.question("digite usa rua")
+// let c_number3 = lerTeclado.question("Digite o numero da sua casa")
+
+// let nome3 = {
+//     nome : nome_3,
+//     idade : i_idade3,
+//     endereço : { 
+//       city_cidade3,
+//     rua : r_rua3,
+//     casa : c_number3
+//     }
+// }
+// let listaDeUsuarios = [nome1 , nome2, nome3]
+// console.table(listaDeUsuarios)
+// console.log(nome2.nome, nome.idade)
+// console.table(nome3.endereço)
+// console.log(nome1.nome, nome.rua)
 // ------------------------------------------------------------
 // EXERCÍCIO 8 – Ranking de notas
 // ------------------------------------------------------------
@@ -147,11 +195,41 @@ console.log("_______________________________");
 // g) Exiba o nome e a 3ª nota do 1º aluno.
 
 // → Seu código aqui:
+// let aluno01 = lerTeclado.question("Nome do aluno")
+// let n01_aluno01= lerTeclado.question(`nota 1 do aluno ${aluno01}:`)
+// let n02_aluno01= lerTeclado.question(`nota 2 do aluno ${aluno01}:`)
+// let n03_aluno01= lerTeclado.question(`nota 3 do aluno ${aluno01}}`)
 
+// let aluno01 = lerTeclado.question("Nome do aluno")
+// let n01_aluno01= lerTeclado.question(`nota 1 do aluno ${aluno02}:`)
+// let n02_aluno01= lerTeclado.question(`nota 2 do aluno ${aluno02}:`)
+// let n03_aluno01= lerTeclado.question(`nota 3 do aluno ${aluno02}}`)
 
-console.log("_______________________________");
+// let aluno01 = lerTeclado.question("Nome do aluno")
+// let n01_aluno01= lerTeclado.question(`nota 1 do aluno ${aluno03}:`)
+// let n02_aluno01= lerTeclado.question(`nota 2 do aluno ${aluno03}:`)
+// let n03_aluno01= lerTeclado.question(`nota 3 do aluno ${aluno03}}`)
+ 
+let aluno01 = {
+    nome: lerTeclado.question("Digite o nome do primeiro aluno"),
+    notas: [lerTeclado.questionInt(" Digite a primeira nota"),lerTeclado.questionInt(" Digite a segunda nota"),lerTeclado.questionInt(" Digite a terceira nota")] 
+}
 
+let aluno02 = {
+    nome: lerTeclado.question("Digite o nome do segundo aluno"),
+    notas: [lerTeclado.questionInt(" Digite a primeira nota"),lerTeclado.questionInt(" Digite a segunda nota"),lerTeclado.questionInt(" Digite a terceira nota")]
 
+}
+let aluno03 = {
+    nome: lerTeclado.question("Digite o nome do terceiro aluno"),
+    notas: [lerTeclado.questionInt(" Digite a primeira nota"),lerTeclado.questionInt(" Digite a segunda nota"),lerTeclado.questionInt(" Digite a terceira nota")]
+
+}
+let turma = [aluno01 , aluno02, aluno03]
+console.table (turma)
+console.log(turma[1].nome, turma[1].notas[0])
+console.log(turma[2].nome, turma[2].notas[1])
+console.log(turma[0].nome, turma[0].notas[2])
 // ------------------------------------------------------------
 // EXERCÍCIO 9 – Cadastro de produto
 // ------------------------------------------------------------
@@ -169,7 +247,10 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-
+let nome = lerTeclado.question("nome:")
+let categoria = lerTeclado.question("categoria:")
+let preço = lerTeclado.question("preço:")
+let quantidade = lerTeclado.question("quantidade")
 console.log("_______________________________");
 
 
