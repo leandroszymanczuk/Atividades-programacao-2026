@@ -64,7 +64,7 @@ console.log("================================");
 console.log(`nome: ${nome}`);
 console.log(`profissao: ${profissao}`);
 console.log(`cidade: ${cidade}`);
-console.log(`email: ${email}`);
+console.log(`email: ${email}`);  
 console.log(`telefone ${telefone}`);
 console.log(`anosExperiencia ${anosExperiencia}`);
 console.log(`disponivelParaFreelance ${disponivelParaFreelance}`);
