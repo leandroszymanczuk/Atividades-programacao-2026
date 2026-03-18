@@ -51,12 +51,12 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-let largura = 8
-let altura = 5
-let area = largura * altura
-let perimetro =  (2 * largura + 2 * altura)
-console.log(`Retângulo | Largura: ${largura} | Altura: ${altura} | Área: ${area} | Perímetro: ${perimetro}`);
-console.log("_______________________________");
+//let largura = 8
+//let altura = 5
+//let area = largura * altura
+//let perimetro =  (2 * largura + 2 * altura)
+//console.log(`Retângulo | Largura: ${largura} | Altura: ${altura} | Área: ${area} | Perímetro: ${perimetro}`);
+//console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -72,7 +72,11 @@ console.log("_______________________________");
 //    Use toFixed(2) nos valores em reais.
 
 // → Seu código aqui:
-
+//let precoOriginal = 250;
+//let percentualDesconto = 15;
+//let valorDesconto = precoOriginal * (percentualDesconto / 100);
+//let precoFinal = precoOriginal - valorDesconto;
+//console.log(`Preço original: R$ ${precoOriginal.toFixed(2)} | Desconto: R$ ${valorDesconto.toFixed(2)} | Preço final: R$ ${precoFinal.toFixed(2)}`);
 
 console.log("_______________________________");
 
@@ -89,6 +93,15 @@ console.log("_______________________________");
 //    "Pontos após <tipo da operação>: <valor>"
 
 // → Seu código aqui:
+//let pontos = 100;
+//pontos += 50; 
+//console.log(`Após somar 50 pontos: ${pontos}`);
+//pontos -= 30;
+//console.log(`Após subtrair 30 pontos: ${pontos}`);
+//pontos *= 2;
+//console.log(`Após multiplicar por 2 : ${pontos}`);
+//pontos /= 4;
+//console.log(`Após dividir por 4 : ${pontos}`);
 
 
 console.log("_______________________________");
@@ -105,8 +118,24 @@ console.log("_______________________________");
 // f) Incremente "nivel" três vezes usando ++nivel (prefixo) e exiba cada resultado.
 
 // → Seu código aqui:
+ // a) Declarar variável "vidas" com valor 3
+ let vidas = 3;
+ console.log(`Vidas atuais: ${vidas}`);
+ 
+ vidas++;
+ console.log(`Vidas após 1º incremento: ${vidas}`);
+ 
+ vidas++;
+ console.log(`Vidas após 2º incremento: ${vidas}`);
 
-
+ vidas--;
+ console.log(`Vidas após decremento: ${vidas}`);
+ 
+ let nivel = 1;
+ 
+ console.log(`Nível após 1º incremento: ${++nivel}`);
+ console.log(`Nível após 2º incremento: ${++nivel}`);
+ console.log(`Nível após 3º incremento: ${++nivel}`);
 console.log("_______________________________");
 
 
@@ -122,9 +151,18 @@ console.log("_______________________________");
 // f) Use Math.min() para encontrar o menor entre 42, 17, 89, 5, 63. Exiba o resultado.
 
 // → Seu código aqui:
+ let nota = 7.3;
+ console.log(`Math.round(${nota}) = ${Math.round(nota)}`);
+ console.log(`Math.floor(${nota}) = ${Math.floor(nota)}`);
+ console.log(`Math.ceil(${nota}) = ${Math.ceil}`);
+ let temperatura = -12.5
+ console.log(`Math.abs(${temperatura}) = ${Math.abs(temperatura)}`);
+ let maiorNumero = Math.max(43, 18, 78, 5, 53);
+ console.log(`O maior número é: ${maiorNumero}`);
 
-
-console.log("_______________________________");
+ let menorNumero = Math.min(43, 18, 79, 5, 53);
+ console.log(`O menor número é: ${menorNumero}`);
+ console.log("_______________________________");
 
 
 // ------------------------------------------------------------
