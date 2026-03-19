@@ -12,6 +12,8 @@
 //       não serão solicitados novamente.
 // ============================================================
 
+var readline = require("readline-sync");
+
 
 // ------------------------------------------------------------
 // EXERCÍCIO 1 – Operações básicas
@@ -151,18 +153,18 @@ console.log("_______________________________");
 // f) Use Math.min() para encontrar o menor entre 42, 17, 89, 5, 63. Exiba o resultado.
 
 // → Seu código aqui:
- let nota = 7.3;
- console.log(`Math.round(${nota}) = ${Math.round(nota)}`);
- console.log(`Math.floor(${nota}) = ${Math.floor(nota)}`);
- console.log(`Math.ceil(${nota}) = ${Math.ceil}`);
- let temperatura = -12.5
- console.log(`Math.abs(${temperatura}) = ${Math.abs(temperatura)}`);
- let maiorNumero = Math.max(43, 18, 78, 5, 53);
- console.log(`O maior número é: ${maiorNumero}`);
+//  let nota = 7.3;
+//  console.log(`Math.round(${nota}) = ${Math.round(nota)}`);
+//  console.log(`Math.floor(${nota}) = ${Math.floor(nota)}`);
+//  console.log(`Math.ceil(${nota}) = ${Math.ceil}`);
+//  let temperatura = -12.5
+//  console.log(`Math.abs(${temperatura}) = ${Math.abs(temperatura)}`);
+//  let maiorNumero = Math.max(43, 18, 78, 5, 53);
+//  console.log(`O maior número é: ${maiorNumero}`);
 
- let menorNumero = Math.min(43, 18, 79, 5, 53);
- console.log(`O menor número é: ${menorNumero}`);
- console.log("_______________________________");
+//  let menorNumero = Math.min(43, 18, 79, 5, 53);
+//  console.log(`O menor número é: ${menorNumero}`);
+//  console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -174,6 +176,12 @@ console.log("_______________________________");
 //    "Nota 1: <n1> | Nota 2: <n2> | Nota 3: <n3>"
 //    "Média: <media>" (com 2 casas decimais usando toFixed(2))
 
+// let n1 = readline.questionFloat ("Digite o numero 1:");
+// let n2 = readline.questionFloat ("Digite o numero 2:");
+// let n3 = readline.questionFloat ("Digite o numero 3:");
+// let media = (n1 + n2 + n3 ) / 3;
+// console.log(`nota 1: ${n1} | nota 2: ${n2} | nota 3: ${n3} `);
+// console.log(`média: ${media.toFixed(2)}`)
 // → Seu código aqui:
 
 
@@ -191,6 +199,12 @@ console.log("_______________________________");
 //    "Valor entregue:   R$ <entregue>"
 //    "Troco:            R$ <troco>"
 //    Use toFixed(2) em todos os valores.
+// let valor = readline.questionFloat ("Digite o valor da compra :");
+// let valorPago = readline.questionFloat ("Digite o valor entregue pelo cliente, deve ser maior que o valor da compra");
+// let troco = valorPago - valor;
+// console.log(`total da compra: ${valor.toFixed(2)}`)
+// console.log(`valor entregue: ${valorPago.toFixed(2)}`)
+// console.log(`troco: ${troco.toFixed(2)}`)
 
 // → Seu código aqui:
 
@@ -202,11 +216,26 @@ console.log("_______________________________");
 // EXERCÍCIO 9 – Valor total de listas
 // ------------------------------------------------------------
 // a) Dada uma lista de preços, calcule e exiba o total.
-let precos = [29.90, 49.99, 15.75, 99.90];
-// b) Dada uma lista de notas, calcule e exiba a média.
-let notas = [7.5, 8.2, 6.5, 9.0];
-// c) Dada uma lista de idades, exiba a maior e a menor idade utilizando das funções Math().
-let idades = [15, 22, 30, 18, 25];
+// let precs = [29.90, 49.99, 15.75, 99.90];
+// // b) Dada uma lista de notas, calcule e exiba a média.
+// let nots = [7.5, 8.2, 6.5, 9.0];
+// // c) Dada uma lista de idades, exiba a maior e a menor idade utilizando das funções Math().
+// let idads = [15, 22, 30, 18, 25];
+
+// let precos = [29.90, 49.99, 15.75, 99.90];
+// let totalPrecos = precos.reduce((acumulador, preco) => acumulador + preco, 0);
+// console.log(`Total dos preços: R$ ${totalPrecos.toFixed(2)}`);
+
+// let notas = [7.5, 8.2, 6.5, 9.0];
+// let somaNotas = notas.reduce((acum, nota) => acum + nota, 0);
+// let mediaNotas = somaNotas / notas.length;
+// console.log(`Média das notas: ${mediaNotas.toFixed(2)}`);
+
+// let idades = [15, 22, 30, 18, 25];
+// let idadeMaxima = Math.max(...idades);
+// let idadeMinima = Math.min(...idades);
+// console.log(`Maior idade: ${idadeMaxima}`);
+// console.log(`Menor idade: ${idadeMinima}`);
 
 // → Seu código aqui:
 
@@ -218,20 +247,20 @@ console.log("_______________________________");
 // EXERCÍCIO 10 – Trabalhando com objetos
 // ------------------------------------------------------------
 // Dado o objeto turma:
-let turma = {
-  aluno1: {
-    nome: "João",
-    notas: []
-  },
-  aluno2: {
-    nome: "Maria",
-    notas: []
-  },
-  aluno3: {
-    nome: "Pedro",
-    notas: []
-  }
-}
+// //let turmas = {
+//   aluno1: {
+//     nome: "João",
+//     notas: []
+//   },
+//   aluno2: {
+//     nome: "Maria",
+//     notas: []
+//   },
+//   aluno3: {
+//     nome: "Pedro",
+//     notas: []
+//   }
+// }
 // a) Sem alterar o objeto (utilize somente push), peça para o usuário 3 notas para cada aluno, indicando a quem pertencerá cada nota
 // b) Calcule a média de notas de cada aluno e exiba no console, indicando a quem pertence cada média
 // c) Exiba a média geral da turma
@@ -239,6 +268,16 @@ let turma = {
 // e) Exiba a nota mais alta e a mais baixa da turma
 
 // → Seu código aqui:
+let turma = {
+  aluno1: { nome: "João", notas: [] },
+  aluno2: { nome: "Maria", notas: [] },
+  aluno3: { nome: "Pedro", notas: [] }
+};
+
+
+
+
+
 
 
 console.log("_______________________________");
