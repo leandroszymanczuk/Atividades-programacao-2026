@@ -201,7 +201,6 @@ const precoMaximo = 100;
 let estaDentroDoOrcamento = preco <= precoMaximo;
 let esteItemEhCaro = preco > precoMaximo;
 
-// e) Exibição
 console.log(`Preço informado: R$ ${preco}`);
 console.log(`Dentro do orçamento (≤ R$ ${precoMaximo})? : ${estaDentroDoOrcamento ? "Sim" : "Não"}`);
 console.log(`Item caro (> R$ ${precoMaximo})? : ${esteItemEhCaro ? "Sim" : "Não"}`);
