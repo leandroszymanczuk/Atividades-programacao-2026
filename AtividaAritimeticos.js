@@ -12,7 +12,7 @@
 //       não serão solicitados novamente.
 // ============================================================
 
-var readline = require("readline-sync");
+//var readline = require("readline-sync");
 
 
 // ------------------------------------------------------------
@@ -119,7 +119,7 @@ console.log("_______________________________");
 // e) Declare uma variável "nivel" com valor 1.
 // f) Incremente "nivel" três vezes usando ++nivel (prefixo) e exiba cada resultado.
 
-// → Seu código aqui:
+// → Seu código aqui:ss
  // a) Declarar variável "vidas" com valor 3
  let vidas = 3;
  console.log(`Vidas atuais: ${vidas}`);
