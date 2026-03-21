@@ -10,6 +10,7 @@
 //     node <nomeDoArquivo>.js
 //
 // Dica: Ao terminar um exercício, comente-o. Assim os dados não serão solicitados novamente.
+//teste
 // ============================================================
 let lerTeclado = require("readline-sync")
 
