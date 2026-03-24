@@ -65,15 +65,16 @@ console.log("_______________________________");
 // a) Declare a variável "precoOriginal" com o valor 250.
 // b) Declare a variável "percentualDesconto" com o valor 15 (representa 15%).
 // c) Calcule o valor do desconto e armazene em "valorDesconto".
-//    Dica: valorDesconto = precoOriginal * (percentualDesconto / 100)
+//    Dica:valor Desconto = precoOriginal * (percentualDesconto / 100)
 // d) Calcule o preço final (precoOriginal - valorDesconto) e armazene em "precoFinal".
 // e) Exiba no console usando template literal:
 //    "Preço original: R$ <precoOriginal> | Desconto: R$ <valorDesconto> | Preço final: R$ <precoFinal>"
 //    Use toFixed(2) nos valores em reais.
 
 // → Seu código aqui:
-
-
+let precoOriginal = 250;
+let percentualDesconto = 15%;
+let valorDesconto = precoOriginal * (percentualDesconto/100);
 console.log("_______________________________");
 
 
@@ -137,8 +138,13 @@ console.log("_______________________________");
 //    "Média: <media>" (com 2 casas decimais usando toFixed(2))
 
 // → Seu código aqui:
+let nota = [
+    letTeclado.questionFloat("Primeira nota:"),
+    letTeclado.questionFloat("Segunda nota:"),
+    letTeclado.questionFloat("Terceira nota:")
 
-
+]
+const media = (notas[0] + notas[1] + notas [2]) / notas.legth
 console.log("_______________________________");
 
 
