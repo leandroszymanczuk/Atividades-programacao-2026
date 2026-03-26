@@ -152,18 +152,24 @@ console.log("_______________________________");
 //      - caso contrário → "Entrada inteira."
 
 // → Seu código aqui:
-let usuario = {
-    nome : lerTeclado.question("Nome?"),
-    ingresso : lerTeclado.keyInYN("Possui ingresso"),
-    idade : lerTeclado.question("Sua idade"),
-}
-if(!usuario.ingresso){
-    console.log(`${usuario.nome} Diraja-se a bilheteria.`);
-} else { 
-    if (usuario.idade < 18){
-        console.log("Meia entrada: menor de idade ");
-    }
-}
+// let usuario = {
+//     nome : lerTeclado.question("Nome?"),
+//     ingresso : lerTeclado.keyInYN("Possui ingresso"),
+//     idade : lerTeclado.question("Sua idade"),
+// }
+// if(!usuario.ingresso){
+//     console.log(`${usuario.nome} Diraja-se a bilheteria.`);
+// } else{
+//     if(usuario.idade >= 60){
+//         console.log("Meia-entrada: melhor idade.")  
+//     }else if(usuario.idade < 18){
+//         console.log("Meia-entrada: menor de idade.")
+//     }else{
+//         console.log("Entrada inteira")
+//     }
+
+// } 
+    
 console.log("_______________________________");
 
 
@@ -203,8 +209,14 @@ console.log("_______________________________");
 //    Senão → exiba: "Sem desconto. Preço cheio."
 
 // → Seu código aqui:
-
-
+// const estudante = lerTeclado.keyInYN("Você é estudante? (y/n):");
+// const idadePessoa = lerTeclado.questionInt("Digite sua idade:");
+// const idoso = idadePessoa >= 60
+// if(estudante || idoso){
+//     console.log("Desconto de 50% aplicado")
+// }else{
+//      console.log("Entrada inteira")
+// }
 console.log("_______________________________");
 
 
@@ -225,7 +237,26 @@ console.log("_______________________________");
 // e) Exiba uma mensagem final: "<nome>: <situação> (média: <média>)"
 
 // → Seu código aqui:
-
+// const nomeAluno = lerTeclado.question("Digite o nome do aluno: ");
+// const notaProva1 = lerTeclado.questionFloat("Digite a nota da prova 1:");
+// const notaProva2 = lerTeclado.questionFloat("Digite a nota da prova 2:");
+// const media = (notaProva1 + notaProva2) / 2;
+// const aluno = {
+//     nome: nomeAluno,
+//     prova1: notaProva1,
+//     prova2: notaProva2,
+//     media : media 
+// };
+// let situacao;
+// if(media >7){
+//     situacao = "Aprovado"
+// }else if(media >= 5 ){
+//     situacao = "Em recuperacao"
+// }else{
+//     situacao = "Reprovado"
+// }
+// console.table(aluno)
+// console.log(`${aluno.nome}: ${situacao} (media : ${aluno.nome})`);
 
 console.log("_______________________________");
 
@@ -249,5 +280,35 @@ console.log("_______________________________");
 // g) Chame o professor para realizar alguns testes 🫡
 
 // → Seu código aqui:
+let calculo = {
+     nota1:  lerTeclado.questionFloat("Digite o primeiro numero:"),
+     nota2:  lerTeclado.questionFloat("Digite o segundo numero:"),
+     operacao : lerTeclado.questionInt("Digite o número da operacao: 1 - Soma | 2 - Subtracao | 3 - Multiplicacao | 4 - Divisao: "),
+     simbolo: ""
+}
+let resultado;
+if(calculo.operacao === 1){ 
+    resultado = calculo.nota1 + calculo.nota2
+    calculo.simbolo = "+";
+} else if(calculo.operacao === 2){
+    resultado = calculo.nota1 - calculo.nota2
+    calculo.simbolo = "-"
+} else if(calculo.operacao === 3){
+    resultado = calculo.nota1 * calculo.nota2
+    calculo.simbolo = "*"
+} else if(calculo.operacao === 4){
+    if(calculo.nota2 === 0){
+        console.log(" operacao invalida")
+    } else {
+        resultado = calculo.nota1 / calculo.nota2
+        calculo.simbolo = "/"
+    }
+    
+}
+console.log(`${calculo.nota1} ${calculo.simbolo} ${calculo.nota2} = ${resultado}`)
+
+
+
+console.log
 
 console.log("_______________________________");
