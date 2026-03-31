@@ -24,7 +24,43 @@
 //    "<nome>, seu IMC é <imc> – <classificação>."
 
 // → Seu código aqui:
+const readlineSync = require('readline-sync');
 
+// a) Perguntar dados
+const nome = readlineSync.question("Digite seu nome: ");
+const peso = readlineSync.questionFloat("Digite seu peso (kg): ");
+const altura = readlineSync.questionFloat("Digite sua altura (m): ");
+
+// b) Criar objeto
+const pessoa = {
+    nome: nome,
+    peso: peso,
+    altura: altura
+};
+
+
+pessoa.imc = peso / (altura ** 2);
+
+// d) Classificação
+if (pessoa.imc < 18.5) {
+    pessoa.classificacao = "Abaixo do peso";
+} else if (pessoa.imc < 25) {
+    pessoa.classificacao = "Peso normal";
+} else if (pessoa.imc < 30) {
+    pessoa.classificacao = "Sobrepeso";
+} else if (pessoa.imc < 35) {
+    pessoa.classificacao = "Obesidade grau I";
+} else if (pessoa.imc < 40) {
+    pessoa.classificacao = "Obesidade grau II";
+} else {
+    pessoa.classificacao = "Obesidade grau III";
+}
+
+// e) Exibir tabela
+console.table(pessoa);
+
+// f) Mensagem final
+console.log(`\n${pessoa.nome}, seu IMC é ${pessoa.imc.toFixed(2)} – ${pessoa.classificacao}.`);
 
 console.log("_______________________________");
 
@@ -59,7 +95,7 @@ console.log("_______________________________");
 // Verifique se é possível fazer verificações uma única vez, alterando a lógica ao invés de duplicar código.
 
 // → Seu código aqui:
-
+    
 
 console.log("_______________________________");
 
