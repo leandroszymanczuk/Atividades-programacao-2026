@@ -18,7 +18,7 @@
      idade : 26,
      curso : "logica de programação"
  }
-console.log( "nome da pessoa"; ${aluno.nome});
+console.log(`"nome da pessoa"; ${aluno.nome}`);
 
 
 
@@ -79,7 +79,7 @@ aluno.responsaveis ={
     parentesco: " geovane "  
 
 }
-console.log("os dois responsaveis são    )
+console.log("os dois responsaveis são ")
 // ------------------------------------------------------------
 // EXERCÍCIO 6 – Lista de alunos (array de objetos)
 // ------------------------------------------------------------
