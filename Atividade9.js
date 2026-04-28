@@ -88,7 +88,7 @@ console.log("_______________________________");
 // for (let i = 1; i <= N; i++) {
 //     soma += i;
 // }
-// console.log("Soma de 1 até", N, "=", soma);
+// console.log("Soma de 1 até", ${`N`}, "=", ${`soma`});
 // console.log("_______________________________");
 
 
@@ -102,9 +102,9 @@ console.log("_______________________________");
 // c) Exiba: "<N>! = <resultado>"
 
 // → Seu código aqui:
+
 // const N = lerTeclado.questionInt("Digite um numero inteiro de 1 a 10:")
 // let fatorial = 1;
-
 // for (let i = 1; i <= N; i++) {
 //     fatorial *= i;
 // }
