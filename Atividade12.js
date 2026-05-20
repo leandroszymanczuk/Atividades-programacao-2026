@@ -5,6 +5,8 @@
 // Dica: Faça os exercícios utilizando funções de array,
 //       mas também tente resolver os desafios sem essas funções
 
+let lerTeclado = require("readline-sync")
+
 // ------------------------------------------------------------
 // EXERCÍCIO 1 – Lendo e exibindo um vetor
 // ------------------------------------------------------------
@@ -122,20 +124,20 @@
 
 // → Seu código aqui:
 
-const vetorOriginal = ["A", "B", "C", "D", "E"];
+// const vetorOriginal = ["A", "B", "C", "D", "E"];
 
-let vetorInvertido = [];
+// let vetorInvertido = [];
 
-for (let i = vetorOriginal.length - 1; i >= 0; i--) {
-  vetorInvertido.push(vetorOriginal[i]);
-}
+// for (let i = vetorOriginal.length - 1; i >= 0; i--) {
+//   vetorInvertido.push(vetorOriginal[i]);
+// }
 
-console.log("Original: ", vetorOriginal);
-console.log("Invertido: ", vetorInvertido);
+// console.log("Original: ", vetorOriginal);
+// console.log("Invertido: ", vetorInvertido);
 
-const vetorInvertido2 = [...vetorOriginal].reverse();
+// const vetorInvertido2 = [...vetorOriginal].reverse();
 
-console.log("Invertido com reverse(): ", vetorInvertido2);
+// console.log("Invertido com reverse(): ", vetorInvertido2);
 
 // console.log("_______________________________");
 
@@ -150,7 +152,24 @@ console.log("Invertido com reverse(): ", vetorInvertido2);
 //    "<qtd> produtos cadastrados."
 
 // → Seu código aqui:
+const prompt = require("prompt-sync")();
 
+let produtos = [];
+
+let quantidade = Number(prompt("Quantos produtos deseja cadastrar? "));
+
+for (let i = 0; i < quantidade; i++) {
+    let produto = prompt(`Digite o nome do produto ${i + 1}: `);
+    produtos.push(produto);
+}
+
+console.log("\nLista de produtos cadastrados:");
+
+for (let i = 0; i < produtos.length; i++) {
+    console.log(`${i + 1} - ${produtos[i]}`);
+}
+
+console.log(`${quantidade} produtos cadastrados.`);
 
 // console.log("_______________________________");
 
