@@ -124,7 +124,14 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// function sortear() {
+//     let n = Math.floor(Math.random() * 100) + 1;
+//     console.log("Número sorteado: " + n);
+// }
 
+// for (let i = 0; i < 5; i++) {
+//     sortear();
+// }
 console.log("_______________________________");
 
 
@@ -141,7 +148,20 @@ console.log("_______________________________");
 // c) Chame as duas funções.
 
 // → Seu código aqui:
+// function tabuadaDoCinco() {
+//     for (let i = 1; i <= 10; i++) {
+//         console.log("5 x " + i + " = " + (5 * i));
+//     }
+// }
 
+// function tabuadaDoSete() {
+//     for (let i = 1; i <= 10; i++) {
+//         console.log("7 x " + i + " = " + (7 * i));
+//     }
+// }
+
+// tabuadaDoCinco();
+// tabuadaDoSete();
 
 console.log("_______________________________");
 
