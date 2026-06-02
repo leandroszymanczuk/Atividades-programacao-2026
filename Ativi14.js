@@ -1,3 +1,6 @@
+
+let lerTeclado = require("readline-sync")
+
 // ============================================================
 // ATIVIDADE 14 – Funções Simples
 // ============================================================
@@ -26,7 +29,7 @@ let lerTeclado = require("readline-sync")
 // }
 // saudacao()
 
-console.log("_______________________________");
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -123,16 +126,17 @@ console.log("_______________________________");
 // b) Execute a função 5 vezes - tente fazer sem digitar a função 5 vezes.
 
 // → Seu código aqui:
-
+// Função que sorteia um número de 1 a 100
 // function sortear() {
-//     let n = Math.floor(Math.random() * 100) + 1;
-//     console.log("Número sorteado: " + n);
+//     let numero = Math.floor(Math.random() * 100) + 1;
+//     console.log("Número sorteado:", numero);
 // }
 
 // for (let i = 0; i < 5; i++) {
 //     sortear();
 // }
-console.log("_______________________________");
+
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -150,13 +154,13 @@ console.log("_______________________________");
 // → Seu código aqui:
 // function tabuadaDoCinco() {
 //     for (let i = 1; i <= 10; i++) {
-//         console.log("5 x " + i + " = " + (5 * i));
+//         console.log(`5 x ${i} = ${5 * i}`);
 //     }
 // }
 
 // function tabuadaDoSete() {
 //     for (let i = 1; i <= 10; i++) {
-//         console.log("7 x " + i + " = " + (7 * i));
+//         console.log(`7 x ${i} = ${7 * i}`);
 //     }
 // }
 
@@ -176,24 +180,43 @@ console.log("_______________________________");
 // b) Chame a função 3 vezes.
 
 // → Seu código aqui:
+// function converterTemperatura() {
+//     let celsius = lerTeclado.questionInt("Digite a temperatura em Celsius:");
+//     let fahrenheit = celsius * 1.8 + 32;
 
+//     console.log(`${celsius}°C equivalem a ${fahrenheit}°F`);
+// }
 
-console.log("_______________________________");
+// for (let i = 0; i < 3; i++) {
+//     converterTemperatura();
+// }
+
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
 // EXERCÍCIO 7 – Listando informações
 // ------------------------------------------------------------
 // a) Utilizando o vetor:
-      const filmes = ["Matrix", "Interestelar", "Origem", "Senhor dos Anéis"];
+//  const filmes = ["Matrix", "Interestelar", "Origem", "Senhor dos Anéis"];
 // b) Crie a função 'listarFilmes' que percorre o vetor 'filmes' com for
 //    e exibe cada um no formato: "<i+1> - <filme>".
 // c) Chame listarFilmes() duas vezes.
 
 // → Seu código aqui:
+// const filmes = ["Matrix", "Interestelar", "Origem", "Senhor dos Anéis"];
+
+// function listarFilmes() {
+//     for (let i = 0; i < filmes.length; i++) {
+//         console.log(`${i + 1} - ${filmes[i]}`);
+//     }
+// }
 
 
-console.log("_______________________________");
+// listarFilmes();
+// listarFilmes();
+
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -212,7 +235,35 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// function limparTela() {
+//     for (let i = 0; i < 30; i++) {
+//         console.log("");
+//     }
+// }
 
+// function banner() {
+//     console.log("---------------------------");
+//     console.log("   SISTEMA DE BOAS-VINDAS");
+//     console.log("---------------------------");
+// }
+
+// function pedirNome() {
+//     let nome = lerTeclado.question("Digite seu nome: ");
+//     console.log(`Olá, ${nome}!`);
+// }
+
+// function rodape() {
+//     console.log("Sistema desenvolvido por Leandro Szymanczuk");
+// }
+
+// function principal() {
+//     limparTela();
+//     banner();
+//     pedirNome();
+//     rodape();
+// }
+
+// principal();
 console.log("_______________________________");
 
 
@@ -233,5 +284,76 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+function opcaoSomar() {
+    let n1 = lerTeclado.questionInt("Digite o primeiro numero: ");
+    let n2 = lerTeclado.questionInt("Digite o segundo numero: ");
+    console.log("Soma = " + (n1 + n2));
+}
+
+function opcaoSubtrair() {
+    let n1 = lerTeclado.questionInt("Digite o primeiro numero: ");
+    let n2 = lerTeclado.questionInt("Digite o segundo numero: ");
+    console.log("Subtracao = " + (n1 - n2));
+}
+
+function opcaoMultiplicar() {
+    let n1 = lerTeclado.questionInt("Digite o primeiro numero: ");
+    let n2 = lerTeclado.questionInt("Digite o segundo numero: ");
+    console.log("Multiplicacao = " + (n1 * n2));
+}
+
+function opcaoDividir() {
+    let n1 = lerTeclado.questionInt("Digite o primeiro numero: ");
+    let n2 = lerTeclado.questionInt("Digite o segundo numero: ");
+
+    if (n2 === 0) {
+        console.log("Erro: divisao por zero nao permitida.");
+    } else {
+        console.log("Divisao = " + (n1 / n2));
+    }
+}
+
+function exibirMenu() {
+    console.log("\n===== MENU =====");
+    console.log("1 - Somar");
+    console.log("2 - Subtrair");
+    console.log("3 - Multiplicar");
+    console.log("4 - Dividir");
+    console.log("0 - Sair");
+}
+
+let opcao;
+
+do {
+    exibirMenu();
+    opcao =lerTeclado.questionInt("Escolha uma opcao: ");
+
+    switch (opcao) {
+        case 1:
+            opcaoSomar();
+            break;
+
+        case 2:
+            opcaoSubtrair();
+            break;
+
+        case 3:
+            opcaoMultiplicar();
+            break;
+
+        case 4:
+            opcaoDividir();
+            break;
+
+        case 0:
+            console.log("Encerrando o programa...");
+            break;
+
+        default:
+            console.log("Opcao invalida!");
+    }
+
+} while (opcao !== 0);
 
 console.log("_______________________________");
+
