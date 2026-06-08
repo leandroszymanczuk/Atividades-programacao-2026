@@ -1,6 +1,4 @@
 
-let lerTeclado = require("readline-sync")
-
 // ============================================================
 // ATIVIDADE 14 – Funções Simples
 // ============================================================
@@ -22,12 +20,12 @@ let lerTeclado = require("readline-sync")
 // b) Chame a função 2 vezes.
 
 // → Seu código aqui:
-// function saudacao() {
-//     console.log("Olá!");
-//     console.log("Bem-vindo(a) ao curso de JavaScript.")
-//     console.log("Bons estudos!")
-// }
-// saudacao()
+function saudacao() {
+    console.log("Olá!");
+    console.log("Bem-vindo(a) ao curso de JavaScript.")
+    console.log("Bons estudos!")
+}
+saudacao()
 
 // console.log("_______________________________");
 
@@ -45,22 +43,22 @@ let lerTeclado = require("readline-sync")
 
 // → Seu código aqui:
 
-// function linha() {
-//     console.log("----------------------------------------");
-// }
+function linha() {
+    console.log("----------------------------------------");
+}
 
 
-// function titulo() {
-//     console.log("         RELATÓRIO MENSAL              ");
-// }
+function titulo() {
+    console.log("         RELATÓRIO MENSAL              ");
+}
 
-// function cabecalho() {
-//     linha();
-//     titulo();
-//     linha();
-// }
+function cabecalho() {
+    linha();
+    titulo();
+    linha();
+}
 
-// cabecalho();
+cabecalho();
 // ------------------------------------------------------------
 // EXERCÍCIO 3 – Calculadora de informações
 // ------------------------------------------------------------
@@ -83,36 +81,36 @@ let lerTeclado = require("readline-sync")
 
 // → Seu código aqui:
 
-// let usuarios = {};
-// let contador = 1;
+let usuarios = {};
+let contador = 1;
 
-// function meusDados() {
-//     while (contador <= 2) {
-//         usuarios["usuario" + contador] = {
-//             nome: lerTeclado.question("Nome: "),
-//             idade: lerTeclado.question("Idade: "),
-//             cidade: lerTeclado.question("Cidade: ")
-//         };
+function meusDados() {
+    while (contador <= 2) {
+        usuarios["usuario" + contador] = {
+            nome: lerTeclado.question("Nome: "),
+            idade: lerTeclado.question("Idade: "),
+            cidade: lerTeclado.question("Cidade: ")
+        };
 
-//         contador++;
-//         console.log();
-//     }
-// }
+        contador++;
+        console.log();
+    }
+}
 
-// function exibirDados() {
-//     for (let usuario in usuarios) {
-//         console.log("-------------------------");
-//         console.log("Nome:   " + usuarios[usuario].nome);
-//         console.log("Idade:  " + usuarios[usuario].idade);
-//         console.log("Cidade: " + usuarios[usuario].cidade);
-//         console.log("-------------------------");
-//         console.log();
-//     }
-// }
+function exibirDados() {
+    for (let usuario in usuarios) {
+        console.log("-------------------------");
+        console.log("Nome:   " + usuarios[usuario].nome);
+        console.log("Idade:  " + usuarios[usuario].idade);
+        console.log("Cidade: " + usuarios[usuario].cidade);
+        console.log("-------------------------");
+        console.log();
+    }
+}
 
-// meusDados();
+meusDados();
 
-// exibirDados();
+exibirDados();
 console.log("_______________________________");
 
 
@@ -126,15 +124,15 @@ console.log("_______________________________");
 // b) Execute a função 5 vezes - tente fazer sem digitar a função 5 vezes.
 
 // → Seu código aqui:
-// Função que sorteia um número de 1 a 100
-// function sortear() {
-//     let numero = Math.floor(Math.random() * 100) + 1;
-//     console.log("Número sorteado:", numero);
-// }
 
-// for (let i = 0; i < 5; i++) {
-//     sortear();
-// }
+function sortear() {
+    let numero = Math.floor(Math.random() * 100) + 1;
+    console.log("Número sorteado:", numero);
+}
+
+for (let i = 0; i < 5; i++) {
+    sortear();
+}
 
 // console.log("_______________________________");
 
@@ -152,20 +150,20 @@ console.log("_______________________________");
 // c) Chame as duas funções.
 
 // → Seu código aqui:
-// function tabuadaDoCinco() {
-//     for (let i = 1; i <= 10; i++) {
-//         console.log(`5 x ${i} = ${5 * i}`);
-//     }
-// }
+function tabuadaDoCinco() {
+    for (let i = 1; i <= 10; i++) {
+        console.log(`5 x ${i} = ${5 * i}`);
+    }
+}
 
-// function tabuadaDoSete() {
-//     for (let i = 1; i <= 10; i++) {
-//         console.log(`7 x ${i} = ${7 * i}`);
-//     }
-// }
+function tabuadaDoSete() {
+    for (let i = 1; i <= 10; i++) {
+        console.log(`7 x ${i} = ${7 * i}`);
+    }
+}
 
-// tabuadaDoCinco();
-// tabuadaDoSete();
+tabuadaDoCinco();
+tabuadaDoSete();
 
 console.log("_______________________________");
 
@@ -180,16 +178,16 @@ console.log("_______________________________");
 // b) Chame a função 3 vezes.
 
 // → Seu código aqui:
-// function converterTemperatura() {
-//     let celsius = lerTeclado.questionInt("Digite a temperatura em Celsius:");
-//     let fahrenheit = celsius * 1.8 + 32;
+function converterTemperatura() {
+    let celsius = lerTeclado.questionInt("Digite a temperatura em Celsius:");
+    let fahrenheit = celsius * 1.8 + 32;
 
-//     console.log(`${celsius}°C equivalem a ${fahrenheit}°F`);
-// }
+    console.log(`${celsius}°C equivalem a ${fahrenheit}°F`);
+}
 
-// for (let i = 0; i < 3; i++) {
-//     converterTemperatura();
-// }
+for (let i = 0; i < 3; i++) {
+    converterTemperatura();
+}
 
 // console.log("_______________________________");
 
@@ -204,17 +202,17 @@ console.log("_______________________________");
 // c) Chame listarFilmes() duas vezes.
 
 // → Seu código aqui:
-// const filmes = ["Matrix", "Interestelar", "Origem", "Senhor dos Anéis"];
+const filmes = ["Matrix", "Interestelar", "Origem", "Senhor dos Anéis"];
 
-// function listarFilmes() {
-//     for (let i = 0; i < filmes.length; i++) {
-//         console.log(`${i + 1} - ${filmes[i]}`);
-//     }
-// }
+function listarFilmes() {
+    for (let i = 0; i < filmes.length; i++) {
+        console.log(`${i + 1} - ${filmes[i]}`);
+    }
+}
 
 
-// listarFilmes();
-// listarFilmes();
+listarFilmes();
+listarFilmes();
 
 // console.log("_______________________________");
 
@@ -235,35 +233,35 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// function limparTela() {
-//     for (let i = 0; i < 30; i++) {
-//         console.log("");
-//     }
-// }
+function limparTela() {
+    for (let i = 0; i < 30; i++) {
+        console.log("");
+    }
+}
 
-// function banner() {
-//     console.log("---------------------------");
-//     console.log("   SISTEMA DE BOAS-VINDAS");
-//     console.log("---------------------------");
-// }
+function banner() {
+    console.log("---------------------------");
+    console.log("   SISTEMA DE BOAS-VINDAS");
+    console.log("---------------------------");
+}
 
-// function pedirNome() {
-//     let nome = lerTeclado.question("Digite seu nome: ");
-//     console.log(`Olá, ${nome}!`);
-// }
+function pedirNome() {
+    let nome = lerTeclado.question("Digite seu nome: ");
+    console.log(`Olá, ${nome}!`);
+}
 
-// function rodape() {
-//     console.log("Sistema desenvolvido por Leandro Szymanczuk");
-// }
+function rodape() {
+    console.log("Sistema desenvolvido por Leandro Szymanczuk");
+}
 
-// function principal() {
-//     limparTela();
-//     banner();
-//     pedirNome();
-//     rodape();
-// }
+function principal() {
+    limparTela();
+    banner();
+    pedirNome();
+    rodape();
+}
 
-// principal();
+principal();
 console.log("_______________________________");
 
 
@@ -356,4 +354,3 @@ do {
 } while (opcao !== 0);
 
 console.log("_______________________________");
-
