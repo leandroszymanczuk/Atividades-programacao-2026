@@ -23,15 +23,14 @@
 // f) Exiba uma mensagem final:
 //    "<nome>, seu IMC é <imc> – <classificação>."
 
-// → Seu código aqui:
+
 const readlineSync = require('readline-sync');
 
-// a) Perguntar dados
+
 const nome = readlineSync.question("Digite seu nome: ");
 const peso = readlineSync.questionFloat("Digite seu peso (kg): ");
 const altura = readlineSync.questionFloat("Digite sua altura (m): ");
 
-// b) Criar objeto
 const pessoa = {
     nome: nome,
     peso: peso,
@@ -41,7 +40,7 @@ const pessoa = {
 
 pessoa.imc = peso / (altura ** 2);
 
-// d) Classificação
+
 if (pessoa.imc < 18.5) {
     pessoa.classificacao = "Abaixo do peso";
 } else if (pessoa.imc < 25) {
@@ -56,10 +55,10 @@ if (pessoa.imc < 18.5) {
     pessoa.classificacao = "Obesidade grau III";
 }
 
-// e) Exibir tabela
+
 console.table(pessoa);
 
-// f) Mensagem final
+
 console.log(`\n${pessoa.nome}, seu IMC é ${pessoa.imc.toFixed(2)} – ${pessoa.classificacao}.`);
 
 console.log("_______________________________");
